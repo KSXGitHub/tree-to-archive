@@ -1,0 +1,36 @@
+[package]
+name = "tree-to-archive"
+description = "Create an archive from an fs tree macro or YAML"
+version = "0.0.0"
+edition = "2024"
+authors = ["khai96_ <hvksmr1996@gmail.com>"]
+license = "MIT"
+repository = "https://github.com/KSXGitHub/tree-to-archive.git"
+readme = "README.md"
+include = [
+  "/src",
+  "/Cargo.toml",
+  "/README.md",
+  "/LICENSE.md",
+]
+keywords = [
+  "tar",
+  "tree",
+]
+
+[features]
+default = ["tar"]
+tar = ["dep:tar"]
+
+[dependencies]
+build-fs-tree = "0.8.1"
+pipe-trait = "0.4.0"
+tar = { version = "0.4.44", optional = true }
+
+[dev-dependencies]
+_utils.path = "utils"
+pretty_assertions = "1.4.1"
+
+[package.metadata.docs.rs]
+all-features = true
+rustdoc-args = ["--cfg", "docsrs"]
