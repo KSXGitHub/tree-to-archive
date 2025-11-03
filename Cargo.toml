@@ -3,6 +3,7 @@ name = "tree-to-archive"
 description = "Create an archive from an fs tree macro or YAML"
 version = "0.0.0"
 edition = "2024"
+rust-version = "1.89.0"
 authors = ["khai96_ <hvksmr1996@gmail.com>"]
 license = "MIT"
 repository = "https://github.com/KSXGitHub/tree-to-archive.git"
@@ -29,6 +30,7 @@ tar = { version = "0.4.44", optional = true }
 
 [dev-dependencies]
 _utils.path = "utils"
+cargo_toml = "0.22.3"
 pretty_assertions = "1.4.1"
 
 [package.metadata.docs.rs]
